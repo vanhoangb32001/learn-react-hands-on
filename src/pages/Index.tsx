@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { SEOHead } from "@/components/SEOHead";
 
 const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
-  <article className="card card-hover p-6 space-y-4">
-    <h2 className="text-2xl font-semibold tracking-tight">{title}</h2>
+  <article className="card card-hover glow-effect p-6 space-y-4">
+    <h2 className="text-2xl font-semibold tracking-tight bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">{title}</h2>
     <div className="prose prose-neutral max-w-none dark:prose-invert">
       {children}
     </div>
@@ -18,16 +18,29 @@ const Index = () => {
         description="Bài tập React: JavaScript trong React, Component tuỳ biến, State/Props, Styling, Lifecycle với useEffect – không dùng API."
         canonicalPath="/"
       />
-      <section className="bg-gradient-primary">
-        <div className="container mx-auto py-14 text-center">
-          <h1 className="text-4xl font-bold tracking-tight mb-3">Bộ bài tập React UI – 3 mức độ</h1>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+      <section className="bg-gradient-hero relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-glow"></div>
+        <div className="container mx-auto py-20 text-center relative z-10">
+          <h1 className="text-5xl font-bold tracking-tight mb-6 text-white drop-shadow-lg">
+            Bộ bài tập React UI – 3 mức độ
+          </h1>
+          <p className="text-white/90 max-w-2xl mx-auto text-lg leading-relaxed mb-8">
             Không gọi API, dữ liệu mock cục bộ. Chạm đủ 5 chủ đề: JavaScript in React, Custom Components,
             State & Props, Styling, và React Lifecycle (useEffect).
           </p>
-          <div className="mt-6 inline-flex items-center gap-3">
-            <Link to="/guides" className="px-4 py-2 rounded-md bg-primary text-primary-foreground hover:opacity-90 transition-opacity">Xem Guides</Link>
-            <a href="#exercises" className="px-4 py-2 rounded-md bg-secondary text-secondary-foreground hover:opacity-90 transition-opacity">Đi tới bài tập</a>
+          <div className="mt-8 inline-flex items-center gap-4">
+            <Link 
+              to="/guides" 
+              className="px-6 py-3 rounded-lg bg-white/20 text-white border border-white/30 hover:bg-white/30 transition-all duration-300 hover:scale-105 hover:shadow-lg backdrop-blur-sm"
+            >
+              Xem Guides
+            </Link>
+            <a 
+              href="#exercises" 
+              className="px-6 py-3 rounded-lg bg-white text-gray-900 hover:bg-white/90 transition-all duration-300 hover:scale-105 hover:shadow-xl font-medium"
+            >
+              Đi tới bài tập
+            </a>
           </div>
         </div>
       </section>
@@ -38,9 +51,9 @@ const Index = () => {
             <p className="text-blue-800 dark:text-blue-200 font-medium mb-2">🎯 Xem demo trực tiếp:</p>
             <Link 
               to="/demos/todo" 
-              className="inline-flex items-center px-3 py-2 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center px-4 py-2 text-sm bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 hover:scale-105 hover:shadow-lg font-medium"
             >
-              Demo Todo App →
+              ✨ Demo Todo App →
             </Link>
           </div>
 
@@ -117,9 +130,9 @@ README: cách chạy, GIF demo ngắn`}</pre>
             <p className="text-orange-800 dark:text-orange-200 font-medium mb-2">🎯 Xem demo trực tiếp:</p>
             <Link 
               to="/demos/contact" 
-              className="inline-flex items-center px-3 py-2 text-sm bg-orange-600 text-white rounded-md hover:bg-orange-700 transition-colors"
+              className="inline-flex items-center px-4 py-2 text-sm bg-gradient-to-r from-orange-600 to-pink-600 text-white rounded-lg hover:from-orange-700 hover:to-pink-700 transition-all duration-300 hover:scale-105 hover:shadow-lg font-medium"
             >
-              Demo Contact Book →
+              🎯 Demo Contact Book →
             </Link>
           </div>
 
@@ -190,9 +203,9 @@ README + GIF demo`}</pre>
             <p className="text-green-800 dark:text-green-200 font-medium mb-2">🎯 Xem demo trực tiếp:</p>
             <Link 
               to="/demos/dashboard" 
-              className="inline-flex items-center px-3 py-2 text-sm bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
+              className="inline-flex items-center px-4 py-2 text-sm bg-gradient-to-r from-green-600 to-teal-600 text-white rounded-lg hover:from-green-700 hover:to-teal-700 transition-all duration-300 hover:scale-105 hover:shadow-lg font-medium"
             >
-              Demo Dashboard →
+              🚀 Demo Dashboard →
             </Link>
           </div>
 
@@ -257,8 +270,13 @@ README + GIF demo`}</pre>
 README + GIF demo`}</pre>
         </Section>
 
-        <div className="text-center">
-          <Link to="/guides" className="underline hover:opacity-80">Mở trang Guides để xem snippet & checklist →</Link>
+        <div className="text-center py-8">
+          <Link 
+            to="/guides" 
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary to-accent text-white rounded-lg hover:scale-105 transition-all duration-300 hover:shadow-xl font-medium pulse-glow"
+          >
+            📚 Mở trang Guides để xem snippet & checklist →
+          </Link>
         </div>
       </section>
     </main>

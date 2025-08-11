@@ -1,13 +1,78 @@
 /* Additional design tokens & utilities for the project (no Tailwind @layer usage here) */
 
 :root {
-  /* Uses existing HSL tokens defined in index.css */
-  --gradient-primary: linear-gradient(135deg, hsl(var(--primary) / 0.10), hsl(var(--accent) / 0.10));
-  --shadow-elev: 0 10px 30px -10px hsl(var(--ring) / 0.15);
+  /* Epic gradients and effects */
+  --gradient-primary: linear-gradient(135deg, hsl(var(--primary) / 0.15), hsl(var(--accent) / 0.20));
+  --gradient-hero: linear-gradient(135deg, hsl(264 100% 70%), hsl(340 100% 60%), hsl(200 100% 50%));
+  --gradient-glow: radial-gradient(circle at 50% 50%, hsl(var(--primary) / 0.3), transparent 70%);
+  --shadow-elev: 0 10px 30px -10px hsl(var(--ring) / 0.25);
+  --shadow-glow: 0 0 50px hsl(var(--primary) / 0.4);
+  --shadow-neon: 0 0 20px hsl(var(--accent) / 0.6), 0 0 40px hsl(var(--primary) / 0.4);
 }
 
-/* Utilities (plain classes to avoid @layer requirement in this file) */
+/* Epic utilities for wow effects */
 .bg-gradient-primary { background-image: var(--gradient-primary); }
-.card { border: 1px solid hsl(var(--border)); border-radius: var(--radius); background: hsl(var(--card)); box-shadow: var(--shadow-elev); }
-.card-hover { transition: transform .2s ease, box-shadow .2s ease; }
-.card-hover:hover { transform: translateY(-2px); box-shadow: 0 14px 40px -14px hsl(var(--ring) / 0.25); }
+.bg-gradient-hero { background: var(--gradient-hero); }
+.bg-gradient-glow { background: var(--gradient-glow); }
+
+.card { 
+  border: 1px solid hsl(var(--border)); 
+  border-radius: var(--radius); 
+  background: hsl(var(--card)); 
+  box-shadow: var(--shadow-elev);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.05), transparent 50%);
+  pointer-events: none;
+}
+
+.card-hover { 
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover { 
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-neon);
+  border-color: hsl(var(--primary) / 0.5);
+}
+
+.glow-effect { 
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-effect::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: var(--gradient-glow);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.glow-effect:hover::after {
+  opacity: 1;
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
+  50% { box-shadow: 0 0 40px hsl(var(--primary) / 0.6), 0 0 60px hsl(var(--accent) / 0.4); }
+}
