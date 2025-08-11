@@ -2,7 +2,7 @@
 
 :root {
   /* Uses existing HSL tokens defined in index.css */
-  --gradient-primary: linear-gradient(135deg, hsl(var(--primary) / 0.06), hsl(var(--accent) / 0.06));
+  --gradient-primary: linear-gradient(135deg, hsl(var(--primary) / 0.10), hsl(var(--accent) / 0.10));
   --shadow-elev: 0 10px 30px -10px hsl(var(--ring) / 0.15);
 }
 
