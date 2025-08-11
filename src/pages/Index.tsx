@@ -33,7 +33,17 @@ const Index = () => {
       </section>
 
       <section id="exercises" className="container mx-auto py-10 space-y-8">
-        <Section title="Mức Cơ bản – “Mini Todo/Notes”">
+        <Section title="Mức Cơ bản – "Mini Todo/Notes"">
+          <div className="mb-4 p-4 bg-blue-50 dark:bg-blue-950 rounded-md border border-blue-200 dark:border-blue-800">
+            <p className="text-blue-800 dark:text-blue-200 font-medium mb-2">🎯 Xem demo trực tiếp:</p>
+            <Link 
+              to="/demos/todo" 
+              className="inline-flex items-center px-3 py-2 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+            >
+              Demo Todo App →
+            </Link>
+          </div>
+
           <h3>Mô tả bài toán</h3>
           <p>
             Xây dựng ứng dụng ghi chú/todo nhỏ cho phép thêm, xoá, sửa và đánh dấu hoàn thành. Giao diện tối giản,
@@ -102,7 +112,17 @@ const Index = () => {
 README: cách chạy, GIF demo ngắn`}</pre>
         </Section>
 
-        <Section title="Mức Trung cấp – “Danh bạ liên hệ (Contact Book)”">
+        <Section title="Mức Trung cấp – "Danh bạ liên hệ (Contact Book)"">
+          <div className="mb-4 p-4 bg-orange-50 dark:bg-orange-950 rounded-md border border-orange-200 dark:border-orange-800">
+            <p className="text-orange-800 dark:text-orange-200 font-medium mb-2">🎯 Xem demo trực tiếp:</p>
+            <Link 
+              to="/demos/contact" 
+              className="inline-flex items-center px-3 py-2 text-sm bg-orange-600 text-white rounded-md hover:bg-orange-700 transition-colors"
+            >
+              Demo Contact Book →
+            </Link>
+          </div>
+
           <h3>Mô tả bài toán</h3>
           <p>
             Xây danh bạ đơn giản từ dữ liệu mock {"{ id, name, phone, group }"}. Hỗ trợ tìm kiếm có debounce,
@@ -165,7 +185,17 @@ README: cách chạy, GIF demo ngắn`}</pre>
 README + GIF demo`}</pre>
         </Section>
 
-        <Section title="Mức Nâng cao – “Dashboard Widgets – KHÔNG API”">
+        <Section title="Mức Nâng cao – "Dashboard Widgets – KHÔNG API"">
+          <div className="mb-4 p-4 bg-green-50 dark:bg-green-950 rounded-md border border-green-200 dark:border-green-800">
+            <p className="text-green-800 dark:text-green-200 font-medium mb-2">🎯 Xem demo trực tiếp:</p>
+            <Link 
+              to="/demos/dashboard" 
+              className="inline-flex items-center px-3 py-2 text-sm bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
+            >
+              Demo Dashboard →
+            </Link>
+          </div>
+
           <h3>Mô tả bài toán</h3>
           <p>
             Tạo dashboard gồm các widget độc lập trên dữ liệu mock. Giả bất đồng bộ bằng setTimeout. Có counter tự tăng,
