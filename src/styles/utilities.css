@@ -1,0 +1,14 @@
+/* Additional design tokens & utilities for the project */
+@layer base {
+  :root {
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary) / 0.06), hsl(var(--accent) / 0.06));
+    --shadow-elev: 0 10px 30px -10px hsl(var(--ring) / 0.15);
+  }
+}
+
+@layer utilities {
+  .bg-gradient-primary { background-image: var(--gradient-primary); }
+  .card { border: 1px solid hsl(var(--border)); border-radius: var(--radius); background: hsl(var(--card)); box-shadow: var(--shadow-elev); }
+  .card-hover { transition: transform .2s ease, box-shadow .2s ease; }
+  .card-hover:hover { transform: translateY(-2px); box-shadow: 0 14px 40px -14px hsl(var(--ring) / 0.25); }
+}
