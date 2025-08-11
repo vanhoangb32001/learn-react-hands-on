@@ -33,7 +33,7 @@ const Index = () => {
       </section>
 
       <section id="exercises" className="container mx-auto py-10 space-y-8">
-        <Section title="Mức Cơ bản – "Mini Todo/Notes"">
+        <Section title='Mức Cơ bản – "Mini Todo/Notes"'>
           <div className="mb-4 p-4 bg-blue-50 dark:bg-blue-950 rounded-md border border-blue-200 dark:border-blue-800">
             <p className="text-blue-800 dark:text-blue-200 font-medium mb-2">🎯 Xem demo trực tiếp:</p>
             <Link 
@@ -112,7 +112,7 @@ const Index = () => {
 README: cách chạy, GIF demo ngắn`}</pre>
         </Section>
 
-        <Section title="Mức Trung cấp – "Danh bạ liên hệ (Contact Book)"">
+        <Section title='Mức Trung cấp – "Danh bạ liên hệ (Contact Book)"'>
           <div className="mb-4 p-4 bg-orange-50 dark:bg-orange-950 rounded-md border border-orange-200 dark:border-orange-800">
             <p className="text-orange-800 dark:text-orange-200 font-medium mb-2">🎯 Xem demo trực tiếp:</p>
             <Link 
@@ -185,7 +185,7 @@ README: cách chạy, GIF demo ngắn`}</pre>
 README + GIF demo`}</pre>
         </Section>
 
-        <Section title="Mức Nâng cao – "Dashboard Widgets – KHÔNG API"">
+        <Section title='Mức Nâng cao – "Dashboard Widgets – KHÔNG API"'>
           <div className="mb-4 p-4 bg-green-50 dark:bg-green-950 rounded-md border border-green-200 dark:border-green-800">
             <p className="text-green-800 dark:text-green-200 font-medium mb-2">🎯 Xem demo trực tiếp:</p>
             <Link 
